@@ -12,3 +12,6 @@ if __name__ == '__main__':
     luciano = Pessoa(leandro, nome='Luciano')
     for filho in luciano.filhos:
         print(filho.nome)
+    del luciano.filhos
+    luciano.sobrenome = 'Estevam'
+    print(luciano.__dict__)

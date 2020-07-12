@@ -20,13 +20,15 @@ class Pessoa:
 class Homem(Pessoa):
     pass
 
+class Mutante(Pessoa):
+    olhos = 3
+
 if __name__ == '__main__':
     leandro = Homem(nome='Leandro')
     luciano = Pessoa(leandro, nome='Luciano')
     for filho in luciano.filhos:
         print(filho.nome)
     del luciano.filhos
-    Pessoa.olhos = 4
     luciano.olhos = 1
     del luciano.olhos
     luciano.sobrenome = 'Estevam'
